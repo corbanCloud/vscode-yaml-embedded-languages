@@ -121,6 +121,13 @@ None
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `yaml-embedded-languages.include` | An object where the key defines the language identifier with regex and the value specifies the language TextMate scope name. By default the language identifier will be used as the language name. To change this, the value can be specified as an object with properties including `name`, `scopeName` (required), and `stripIndent`. Hover over these in VS Code to find out more. |
 
+Example:
+Assuming you have a plugin that provides `nginx` as an editor language and you wanted that language to be used when a the first line of a language block is `#nginx` your settings would look like this.
+```json
+  "yaml-embedded-languages.include": {
+    "nginx": "source.nginx"
+  },
+```
 ## Known Issues
 
 See [Issues](https://github.com/harrydowning/vscode-yaml-embedded-languages/issues)
